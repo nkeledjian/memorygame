@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import GameCard from "../GameCard";
 import Header from "../Header";
-import Wrapper from "./components/Wrapper";
-import data from "../../data";
+import Wrapper from "../Wrapper";
+import data from "../../data.json";
 
 class Game extends Component {
 
@@ -79,8 +79,7 @@ class Game extends Component {
       <Wrapper>
         <Header score={this.state.score} topScore = {this.state.topScore} />
         <h1 className="title">Memory Game</h1>
-
-        {this.state.data.map((item) =>
+          {this.state.data.map((item) =>
           <GameCard
             key={item.id}
             id={item.id}
@@ -88,8 +87,7 @@ class Game extends Component {
             clicked={item.clicked}
             handleClick={item.gameCardClick}
           />
-        )}
-
+          )}
       </Wrapper>
     );
   }
