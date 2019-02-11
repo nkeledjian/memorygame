@@ -76,10 +76,8 @@ class Game extends Component {
   // react render method renders the data
   render() {
     return (
-      
-      <Header score={this.state.score} topScore = {this.state.topScore} />
-  
       <Wrapper>
+        <Header score={this.state.score} topScore = {this.state.topScore} />
         <h1 className="title">Memory Game</h1>
 
         {this.state.data.map((item) =>
