@@ -3,6 +3,7 @@ import GameCard from "../GameCard";
 import Header from "../Header";
 import Wrapper from "../Wrapper";
 import data from "../../data.json";
+import Container from "../Container";
 
 class Game extends Component {
 
@@ -79,6 +80,7 @@ class Game extends Component {
       <Wrapper>
         <Header score={this.state.score} topScore = {this.state.topScore} />
         <h1 className="title">Memory Game</h1>
+        <Container>
           {this.state.data.map((item) =>
           <GameCard
             key={item.id}
@@ -88,6 +90,7 @@ class Game extends Component {
             handleClick={item.gameCardClick}
           />
           )}
+        </Container>
       </Wrapper>
     );
   }
