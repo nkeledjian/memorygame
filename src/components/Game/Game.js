@@ -11,13 +11,7 @@ class Game extends Component {
     data,
     score: 0,
     topScore: 0,
-    message: "Click on a new image every time to score!"
-  }
-
-  // initialized when page loads
-  componentDidMount() {
-    // data array reordered upon state change
-    this.setState({ data: this.shuffleCards(this.state.data) });
+    // message: "Click on a new image every time to score!"
   }
 
   // card data is randomized
@@ -48,7 +42,7 @@ class Game extends Component {
     })
   }
 
-  // game is reset with new card formation
+  // game is reset with new card formation - runs resetCards function
   incorrectGuess = newData => {
     this.setState({
         data: this.resetCards(newData),
@@ -56,7 +50,7 @@ class Game extends Component {
     })
   }
 
-  // upon card click, function checks if card has been clicked before - update clicked prop for cards
+  // upon card click, function checks if card has been clicked before - update clicked property for cards
   gameCardClick = id => {
     let guessedCorrectly = false;
     // newData contains an array with the updated click properties
@@ -78,9 +72,10 @@ class Game extends Component {
   render() {
     return (
       <Wrapper>
+      <Container>
         <Header score={this.state.score} topScore = {this.state.topScore} />
         <h1 className="title">Memory Game</h1>
-        <Container>
+      </Container>
           {this.state.data.map((item) =>
           <GameCard
             key={item.id}
@@ -90,7 +85,6 @@ class Game extends Component {
             handleClick={item.gameCardClick}
           />
           )}
-        </Container>
       </Wrapper>
     );
   }
