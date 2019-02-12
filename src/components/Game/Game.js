@@ -74,7 +74,7 @@ class Game extends Component {
       <Wrapper>
       <Container>
         <Header score={this.state.score} topScore = {this.state.topScore} />
-        <h1 className="title">Memory Game</h1>
+        {/* <h1 className="title">Memory Game</h1> */}
       </Container>
           {this.state.data.map((item) =>
           <GameCard
@@ -82,7 +82,7 @@ class Game extends Component {
             id={item.id}
             image={item.image}
             clicked={item.clicked}
-            handleClick={item.gameCardClick}
+            handleClick={this.gameCardClick}
           />
           )}
       </Wrapper>

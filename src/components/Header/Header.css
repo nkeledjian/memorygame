@@ -2,7 +2,7 @@
     background: rgba(0, 225, 255, 0.637);
     width: 100%;
     min-height: 80px;
-    color: ivory;
+    color: rgb(75, 75, 61);
     position: fixed;
     top: 0;
     margin: 0 auto;
@@ -26,9 +26,10 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
-/* .title {
-    font-family: 'Lobster', cursive;
-} */
+.title {
+    text-align: center;
+    font-family: "Arial";
+}
 
 #score {
     font-size: 1.2em;
