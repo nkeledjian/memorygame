@@ -53,6 +53,7 @@ class Game extends Component {
   // upon card click, function checks if card has been clicked before - update clicked property for cards
   gameCardClick = id => {
     let guessedCorrectly = false;
+    console.log("correct guess", guessedCorrectly);
     // newData contains an array with the updated click properties
     const newData = this.state.data.map(item => {
       if (item.id === id) {
@@ -74,7 +75,6 @@ class Game extends Component {
       <Wrapper>
       <Container>
         <Header score={this.state.score} topScore = {this.state.topScore} />
-        {/* <h1 className="title">Memory Game</h1> */}
       </Container>
           {this.state.data.map((item) =>
           <GameCard
