@@ -11,7 +11,6 @@ class Game extends Component {
     data,
     score: 0,
     topScore: 0,
-    // message: "Click on a new image every time to score!"
   }
 
   // card data is randomized
